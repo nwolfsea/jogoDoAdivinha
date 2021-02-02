@@ -1,24 +1,29 @@
 package com.br.zup;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
 
+    public static Scanner entrada() { return new Scanner(System.in); }
+
     public static void main(String[] args) {
-        Random random = new Random();
-        int numeroAleatorio = random.nextInt(10);
+        int numero1 = 2;
+        int numero2 = 1;
+        int numero3 = 3;
+        int numero4 = 0;
 
-        System.out.println("Digite um numero: ");
-        int numeroDoUsuario = new Scanner(System.in).nextInt();
+        System.out.println("Digite o número:");
+        numero1 = entrada().nextInt();
 
-        boolean errou = true;
-        while (errou) {
-            if (numeroAleatorio == numeroDoUsuario) {
-                errou = false;
-                System.out.println("Você acertou o numero era " + numeroAleatorio+"");
-            }
+        if (numero1 == 2) {
+            System.out.println("Parabéns, você ganhou 10 pontos.");
+        } else if (numero1 == numero2) {
+            System.out.println("Parabéns, você ganhou 05 pontos.");
+        } else if (numero1 == 3) {
+            System.out.println("Parabéns, você ganhou 05 pontos.");
+        } else if (numero4 == 0) {
+            System.out.println("Você perdeu.");
         }
+
     }
 }
-
